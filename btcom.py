@@ -16,8 +16,8 @@ def print_board(board):
 
         for i in range(1):
 
-                for j in range(14):
-                        while i <  15:
+                for j in range(17):
+                        while i <  18:
 
                             print( " ",i," " ,end =  '')
 
@@ -27,7 +27,7 @@ def imprime(tab, pontos, tiros, ptab):
 
         print('\nPontuação: ', pontos, end="     ")
         print('     Tiros: ', tiros, end="\n")
-        for j in range(0, 15):
+        for j in range(0,15):
             print(alfabeto[j-1], end="")
             if j == 0:
                 b = 0
@@ -80,7 +80,7 @@ p = Partida()
 imprime(p.tabuleiro.matriz, p.pontos, p.tiros, p.tabuleiro)
 while True:
         while True:
-            pos = (random.randint(1,15), random.randint(1,15))
+            pos = (random.randint(1,16), random.randint(1,16))
             if p.jogar(pos[0], pos[1]):
                 break
         imprime(p.tabuleiro.matriz, p.pontos, p.tiros, p.tabuleiro) #comente essa linha para ter resultados rápidos

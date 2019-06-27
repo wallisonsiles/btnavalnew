@@ -1,6 +1,6 @@
 from btnaval import Partida
 from datetime import datetime
-import random
+import random, time
 RED   = "\033[1;31m"
 BLUE  = "\033[1;34m"
 CYAN  = "\033[1;36m"
@@ -51,9 +51,9 @@ def imprime(tab, pontos, tiros, ptab):
 
                             if tab[i][j][2]:
                                 if tab[i][j][0] == 'A':
-                                        print(CYAN+'O'+RESET, end=" | ")
+                                        print('O', end=" | ")
                                 else:
-                                        print(RED+'X'+ RESET, end=" | ")
+                                        print('X', end=" | ")
                             else:
                                 print(' ', end=" | ")
             print()
@@ -85,5 +85,5 @@ while True:
                 break
         imprime(p.tabuleiro.matriz, p.pontos, p.tiros, p.tabuleiro) #comente essa linha para ter resultados rápidos
         if p.finaliza():
-                break
+                time.sleep(15)
 imprimePF(p.pontos, p.tiros, p.tempo, p.tabuleiro)

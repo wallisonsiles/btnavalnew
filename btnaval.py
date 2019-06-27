@@ -139,8 +139,8 @@ class Tabuleiro():
         off = [-1, 1]
         for i in range(5):
             while True:
-                x = random.randint(2,10)
-                y = random.randint(2,10)
+                x = random.randint(2,14)
+                y = random.randint(2,14)
                 offx = random.choice(off)
                 offy = random.choice(off)
                 offx2 = random.choice(off)
@@ -193,7 +193,7 @@ class Tabuleiro():
         #submarino        
         for i in range(4):
             while True:
-                x = random.randint(1,14)
-                y = random.randint(1,14)
+                x = random.randint(1,15)
+                y = random.randint(1,15)
                 if self.aloca_submarino((x, y)):
                     break
